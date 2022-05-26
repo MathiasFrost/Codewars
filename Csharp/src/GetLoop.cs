@@ -1,25 +1,25 @@
-﻿namespace CSharp;
+﻿// https://www.codewars.com/kata/52a89c2ea8ddc5547a000863/csharp
 
-public static class GetLoop
-{
-    public static int GetLoopSize(Node startNode)
-    {
-        var   length   = 1;
+namespace CSharp;
+
+// ReSharper disable once UnusedType.Global
+public static class GetLoop {
+    // ReSharper disable once UnusedMember.Global
+    public static int GetLoopSize(Node startNode) {
+        var length = 1;
         Node? tortoise = startNode.Next;
-        Node? hare     = startNode.Next?.Next;
+        Node? hare = startNode.Next?.Next;
 
         // Find the cycle, the hare and the tortoise will encounter at the cycle start
-        while (tortoise != hare)
-        {
+        while (tortoise != hare) {
             tortoise = tortoise?.Next;
-            hare     = hare?.Next?.Next;
+            hare = hare?.Next?.Next;
         }
 
         // Find the lenght of the cycle - count the number of step to return at the cycle beginning
         hare = tortoise?.Next;
 
-        while (tortoise != hare)
-        {
+        while (tortoise != hare) {
             hare = hare?.Next;
             length++;
         }
@@ -28,23 +28,22 @@ public static class GetLoop
     }
 }
 
-public class Node
-{
-    public Node(string name) { Name = name; }
+public class Node {
+    public Node(string name) => Name = name;
 
     public Node? Next { get; set; }
 
-    private string Name { get; }
+    // ReSharper disable once UnusedAutoPropertyAccessor.Local
+    string Name { get; }
 }
 
-public static class NodeCreator
-{
-    public static Node CreateChain(int tail, int loop)
-    {
-        if (tail < 1 || loop < 1)
-            throw new IndexOutOfRangeException("Has to be greater than 0");
+// ReSharper disable once UnusedType.Global
+public static class NodeCreator {
+    // ReSharper disable once UnusedMember.Global
+    public static Node CreateChain(int tail, int loop) {
+        if (tail < 1 || loop < 1) throw new IndexOutOfRangeException("Has to be greater than 0");
 
-        var         root      = new Node("A");
+        var root = new Node("A");
         IList<Node> tailNodes = new List<Node>();
         for (var i = 0; i < tail - 1; i++) tailNodes.Add(new Node(((char)(1 + i + 'A')).ToString()));
 
