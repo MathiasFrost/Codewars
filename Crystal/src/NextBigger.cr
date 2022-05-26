@@ -1,3 +1,5 @@
+# https://www.codewars.com/kata/55983863da40caa2c900004e/crystal
+
 class NextBigger
   def self.next_bigger(n : Int64)
     digits = n.digits.reverse!
