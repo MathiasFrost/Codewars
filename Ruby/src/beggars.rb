@@ -1,4 +1,4 @@
-# https://www.codewars.com/kata/59590976838112bfea0000fa/csharp
+# https://www.codewars.com/kata/59590976838112bfea0000fa/ruby
 
 class Beggars
 	public
