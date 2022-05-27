@@ -1,4 +1,4 @@
-# https://www.codewars.com/kata/55983863da40caa2c900004e/csharp
+# https://www.codewars.com/kata/55983863da40caa2c900004e/python
 
 class NextBigger:
     
