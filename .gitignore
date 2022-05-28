@@ -472,3 +472,11 @@ cmake-build-debug
 .c4z
 bin
 *.DotSettings
+/Packages
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+.build
