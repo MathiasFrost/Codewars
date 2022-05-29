@@ -1,6 +1,4 @@
-//
 // Created by Mathi on 2022-02-04.
-//
 
 #include <string.h>
 #include <stdio.h>
@@ -8,24 +6,23 @@
 #include "RomanNumerals.h"
 
 const struct RomanNumber RomanNumbers[] = {
-		{ "M",  1000 },
+		{ "M", 1000 },
 		{ "CM", 900 },
-		{ "D",  500 },
+		{ "D", 500 },
 		{ "CD", 400 },
-		{ "C",  100 },
+		{ "C", 100 },
 		{ "XC", 90 },
-		{ "L",  50 },
+		{ "L", 50 },
 		{ "XL", 40 },
-		{ "X",  10 },
+		{ "X", 10 },
 		{ "IX", 9 },
-		{ "V",  5 },
+		{ "V", 5 },
 		{ "IV", 4 },
-		{ "I",  1 }
+		{ "I", 1 }
 };
 
-int fromRoman(char* roman)
+int RomanNumerals__FromRoman(char* roman)
 {
-
 	int ret = 0;
 	int i = 0;
 	while (*roman)
@@ -36,14 +33,15 @@ int fromRoman(char* roman)
 			roman += strlen(RomanNumbers[i].Letter);
 		}
 		else
-		{ i++; }
+		{
+			i++;
+		}
 	}
 	return ret;
 }
 
-void toRoman(int number, char* destination)
+void RomanNumerals__ToRoman(int number, char* destination)
 {
-
 	int i = 0;
 	*destination = 0;
 	while (number)
@@ -54,6 +52,8 @@ void toRoman(int number, char* destination)
 			number -= RomanNumbers[i].Number;
 		}
 		else
-		{ i++; }
+		{
+			i++;
+		}
 	}
 }

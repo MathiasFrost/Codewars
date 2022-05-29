@@ -1,6 +1,4 @@
-//
 // Created by Mathi on 2022-02-07.
-//
 
 #include <string.h>
 #include <stdlib.h>
@@ -10,7 +8,7 @@
 
 #define OFFSET 97
 
-char* hist(const char* s)
+char* Histogram__Hist(const char* s)
 {
 	unsigned short count[26] = { 0 };
 	for (size_t i = 0; i < strlen(s); i++)
@@ -18,7 +16,7 @@ char* hist(const char* s)
 		const char letter = s[i];
 		count[letter - OFFSET]++;
 	}
-
+	
 	char* res = calloc(400, sizeof(char));
 	for (unsigned char i = 0; i < 4; i++)
 	{
