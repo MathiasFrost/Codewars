@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/59f44c7bd4b36946fd000052/typescript
+
 export class Histogram
 {
 	public static hist(s: string): string

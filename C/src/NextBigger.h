@@ -1,8 +1,5 @@
-// Created by Mathi on 2022-02-04.
+// https://www.codewars.com/kata/55983863da40caa2c900004e/c
 
-#ifndef C_NEXTBIGGER_H
-#define C_NEXTBIGGER_H
+#pragma once
 
 long long NextBigger_NextBiggerNumber(long long n);
-
-#endif // C_NEXTBIGGER_H

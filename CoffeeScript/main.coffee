@@ -1,4 +1,4 @@
-import { NextBigger } from "./src/nextBigger.coffee"
+import { NextBigger } from "./src/nextBigger"
 
 console.log "Codewars"
 

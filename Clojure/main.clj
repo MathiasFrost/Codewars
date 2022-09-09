@@ -1,9 +1,9 @@
 (require 'Histogram)
 
-(ns Main)
+(ns main)
 
 (defn -main
-  ([] (-main ""))
-  ([args]
-   (println "Codewars Clojure")
-   (println (Histogram/hist "tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb"))))
+	([] (-main ""))
+	([args]
+	 (println "Codewars Clojure")
+	 (println (Histogram/hist "tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb"))))

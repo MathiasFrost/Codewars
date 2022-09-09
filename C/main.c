@@ -1,25 +1,29 @@
 #include <stdio.h>
-#include "Source/RomanNumerals.h"
-#include "Source/Histogram.h"
-#include "Source/NextBigger.h"
-#include "Source/AlphabeticalAddition.h"
+#include "src/RomanNumerals.h"
+#include "src/Histogram.h"
+#include "src/NextBigger.h"
+#include "src/AlphabeticalAddition.h"
+#include "src/BitCounting.h"
 
-int main() {
-  printf("Codewars C\n");
+int main()
+{
+	printf("Codewars C\n");
 
-  printf("'IX' is %d\n", fromRoman("IX"));
+	printf("'IX' is %d\n", RomanNumerals_FromRoman("IX"));
 
-  char number[100] = {0};
-  toRoman(1642, number);
-  printf("1642 is '%s'\n", number);
+	char number[100] = {0};
+	RomanNumerals_ToRoman(1642, number);
+	printf("1642 is '%s'\n", number);
 
-  const char *histStr = "tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb";
-  char	*histogram = hist(histStr);
-  printf("%s\n", histogram);
+	const char *histStr = "tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb";
+	char *histogram = Histogram_Hist(histStr);
+	printf("%s\n", histogram);
 
-  printf("Next bigger of 1234567890 is %lld\n", next_bigger_number(1234567890));
+	printf("Next bigger of 1234567890 is %lld\n", NextBigger_NextBiggerNumber(1234567890));
 
-  printf("y + c + b is %c\n", add_letters(3, (unsigned char *)"ycb"));
+	printf("y + c + b is %c\n", AlphabeticalAddition_AddLetters(3, (unsigned char*)"ycb"));
 
-  return 0;
+	printf("Number of bits in 1234 is %d\n", BitCounting_CountBits(1234));
+	
+	return 0;
 }

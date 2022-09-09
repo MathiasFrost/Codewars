@@ -1,10 +1,7 @@
-// Created by Mathi on 2022-02-20.
+// https://www.codewars.com/kata/5d50e3914861a500121e1958/c
 
-#ifndef C_ALPHABETICALADDITION_H
-#define C_ALPHABETICALADDITION_H
+#pragma once
 
 #include <stddef.h>
 
-unsigned char AlphabeticalAddition__AddLetters(size_t n, unsigned char* string);
-
-#endif // C_ALPHABETICALADDITION_H
+unsigned char AlphabeticalAddition_AddLetters(size_t n, unsigned char* string);

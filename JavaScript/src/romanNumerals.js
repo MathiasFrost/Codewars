@@ -4,10 +4,10 @@ class RomanNumber
 {
 	/** @type string */
 	letter;
-	
+
 	/** @type number */
 	number;
-	
+
 	/** @param {string} letter
 	 * @param {number} number */
 	constructor(letter, number)
@@ -32,9 +32,9 @@ export class RomanNumerals
 		new RomanNumber("IX", 9),
 		new RomanNumber("V", 5),
 		new RomanNumber("IV", 4),
-		new RomanNumber("I", 1),
+		new RomanNumber("I", 1)
 	];
-	
+
 	/** @param {string} roman */
 	static fromRoman(roman)
 	{
@@ -54,7 +54,7 @@ export class RomanNumerals
 		}
 		return ret;
 	}
-	
+
 	/** @param {number} number */
 	static toRoman(number)
 	{

@@ -1,16 +1,10 @@
-//
-// Created by Mathi on 2022-02-04.
-//
+// https://www.codewars.com/kata/51b66044bce5799a7f000003/cpp
 
 #include "RomanNumerals.hpp"
 
-RomanNumerals::RomanNumerals()
+unsigned int RomanNumerals::FromRoman(std::string rn)
 {
-}
-
-int RomanNumerals::from_roman(std::string rn)
-{
-	int ret = 0;
+	unsigned int ret = 0;
 	int i = 0;
 	while (rn.length())
 	{
@@ -20,12 +14,15 @@ int RomanNumerals::from_roman(std::string rn)
 			ret += RomanNumbers[i].Number;
 			rn = rn.substr(RomanNumbers[i].Letter.length());
 		}
-		else i++;
+		else
+		{
+			i++;
+		}
 	}
 	return ret;
 }
 
-std::string RomanNumerals::to_roman(unsigned int n)
+std::string RomanNumerals::ToRoman(unsigned int n)
 {
 	int i = 0;
 	std::string ret;
@@ -36,7 +33,10 @@ std::string RomanNumerals::to_roman(unsigned int n)
 			ret += RomanNumbers[i].Letter;
 			n -= RomanNumbers[i].Number;
 		}
-		else i++;
+		else
+		{
+			i++;
+		}
 	}
 	return ret;
 }

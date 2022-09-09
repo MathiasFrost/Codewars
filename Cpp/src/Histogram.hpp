@@ -1,17 +1,11 @@
-//
-// Created by Mathi on 2022-02-08.
-//
+// https://www.codewars.com/kata/59f44c7bd4b36946fd000052/cpp
 
-#ifndef CPP_HISTOGRAM_HPP
-#define CPP_HISTOGRAM_HPP
+#pragma once
 
 #include <string>
 
 class Histogram
 {
 public:
-	static std::string hist(const std::string& s);
+	static std::string Hist(const std::string& s);
 };
-
-
-#endif //CPP_HISTOGRAM_HPP

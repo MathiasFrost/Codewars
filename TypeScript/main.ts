@@ -1,5 +1,5 @@
-import { Histogram } from "./histogram";
-import { NextBigger } from "./nextBigger";
+import { Histogram } from "./src/histogram";
+import { NextBigger } from "./src/nextBigger";
 
 console.log("Codewars TypeScript");
 

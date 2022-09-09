@@ -1,4 +1,4 @@
-// Created by Mathi on 2022-02-04.
+// https://www.codewars.com/kata/51b66044bce5799a7f000003/c
 
 #include <string.h>
 #include <stdio.h>
@@ -21,7 +21,7 @@ const struct RomanNumber RomanNumbers[] = {
 		{ "I", 1 }
 };
 
-int RomanNumerals__FromRoman(char* roman)
+int RomanNumerals_FromRoman(char* roman)
 {
 	int ret = 0;
 	int i = 0;
@@ -40,7 +40,7 @@ int RomanNumerals__FromRoman(char* roman)
 	return ret;
 }
 
-void RomanNumerals__ToRoman(int number, char* destination)
+void RomanNumerals_ToRoman(int number, char* destination)
 {
 	int i = 0;
 	*destination = 0;

@@ -1,12 +1,15 @@
-// Created by Mathi on 2022-02-04.
+// https://www.codewars.com/kata/52a89c2ea8ddc5547a000863/c
 
 #include "GetLoop.h"
 
-int GetLoop__LoopSize(SNode* node)
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
+
+int GetLoop_LoopSize(Node* node)
 {
 	int length = 1;
-	SNode* tortoise = node->next;
-	SNode* hare = node->next->next;
+	Node* tortoise = node->next;
+	Node* hare = node->next->next;
 	
 	// Find the cycle, the hare and the tortoise will encounter at the cycle start
 	while (tortoise != hare)
@@ -25,3 +28,5 @@ int GetLoop__LoopSize(SNode* node)
 	
 	return length;
 }
+
+#pragma clang diagnostic pop

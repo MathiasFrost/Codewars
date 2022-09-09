@@ -3,4 +3,4 @@ project(C C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(C main.c Source/RomanNumerals.c Source/RomanNumerals.h Source/GetLoop.c Source/GetLoop.h Source/BallUpwards.c Source/BallUpwards.h Source/Histogram.c Source/Histogram.h Source/NextBigger.c Source/NextBigger.h Source/AlphabeticalAddition.c Source/AlphabeticalAddition.h)
+add_executable(C main.c src/RomanNumerals.c src/RomanNumerals.h src/GetLoop.c src/GetLoop.h src/Histogram.c src/Histogram.h src/NextBigger.c src/NextBigger.h src/AlphabeticalAddition.c src/AlphabeticalAddition.h src/BitCounting.c src/BitCounting.h)

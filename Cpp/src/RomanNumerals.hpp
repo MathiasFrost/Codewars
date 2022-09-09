@@ -1,9 +1,6 @@
-//
-// Created by Mathi on 2022-02-04.
-//
+// https://www.codewars.com/kata/51b66044bce5799a7f000003/cpp
 
-#ifndef CPP_ROMANNUMERALS_HPP
-#define CPP_ROMANNUMERALS_HPP
+#pragma once
 
 #include <string>
 #include <vector>
@@ -17,28 +14,24 @@ struct RomanNumber
 class RomanNumerals
 {
 public:
-	RomanNumerals();
-
-	int from_roman(std::string rn);
-
-	std::string to_roman(unsigned int n);
+	unsigned int FromRoman(std::string rn);
+	
+	std::string ToRoman(unsigned int n);
 
 private:
 	const std::vector<RomanNumber> RomanNumbers = {
-			{ "M",  1000 },
+			{ "M", 1000 },
 			{ "CM", 900 },
-			{ "D",  500 },
+			{ "D", 500 },
 			{ "CD", 400 },
-			{ "C",  100 },
+			{ "C", 100 },
 			{ "XC", 90 },
-			{ "L",  50 },
+			{ "L", 50 },
 			{ "XL", 40 },
-			{ "X",  10 },
+			{ "X", 10 },
 			{ "IX", 9 },
-			{ "V",  5 },
+			{ "V", 5 },
 			{ "IV", 4 },
-			{ "I",  1 }
+			{ "I", 1 }
 	};
 };
-
-#endif //CPP_ROMANNUMERALS_HPP

@@ -14,4 +14,4 @@ console.log(`Next bigger of 144 is ${NextBigger.nextBigger(144)}`);
 const hist = "tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb";
 console.log(Histogram.hist(hist));
 
-console.log(Beggars.beggars([ 1, 2, 3, 4, 5 ], 2));
+console.log(Beggars.beggars([1, 2, 3, 4, 5], 2));

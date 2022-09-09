@@ -1,16 +1,12 @@
-//
-// Created by Mathi on 2022-02-04.
-//
+// https://www.codewars.com/kata/52a89c2ea8ddc5547a000863/cpp
 
-#ifndef CPP_GETLOOP_HPP
-#define CPP_GETLOOP_HPP
+#pragma once
 
 class Node
 {
 public:
 	Node* getNext()
 	{
-
 		return this->next;
 	}
 
@@ -23,5 +19,3 @@ class GetLoop
 public:
 	int GetLoopSize(Node* startNode);
 };
-
-#endif //CPP_GETLOOP_HPP

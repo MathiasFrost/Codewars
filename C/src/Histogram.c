@@ -1,4 +1,7 @@
-// Created by Mathi on 2022-02-07.
+// https://www.codewars.com/kata/59f44c7bd4b36946fd000052/c
+
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling"
 
 #include <string.h>
 #include <stdlib.h>
@@ -6,9 +9,12 @@
 
 #include "Histogram.h"
 
-#define OFFSET 97
+enum
+{
+	OFFSET = 97
+};
 
-char* Histogram__Hist(const char* s)
+char* Histogram_Hist(const char* s)
 {
 	unsigned short count[26] = { 0 };
 	for (size_t i = 0; i < strlen(s); i++)
@@ -32,3 +38,5 @@ char* Histogram__Hist(const char* s)
 	res[strlen(res) - 1] = '\0';
 	return res;
 }
+
+#pragma clang diagnostic pop

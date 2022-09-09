@@ -1,8 +1,5 @@
-// Created by Mathi on 2022-02-07.
+// https://www.codewars.com/kata/59f44c7bd4b36946fd000052/c
 
-#ifndef C_HISTOGRAM_H
-#define C_HISTOGRAM_H
+#pragma once
 
-char* Histogram__Hist(const char* s);
-
-#endif // C_HISTOGRAM_H
+char* Histogram_Hist(const char* s);

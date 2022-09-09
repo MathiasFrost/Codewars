@@ -2,13 +2,12 @@
 
 export class Beggars
 {
-	
 	/** @param {number[]} values
 	 * @param {number} n */
 	static beggars(values, n)
 	{
 		const arr = [];
-		
+
 		for (let i = 0; i < n; i++)
 		{
 			let res = 0;
@@ -18,7 +17,7 @@ export class Beggars
 			}
 			arr.push(res);
 		}
-		
+
 		return arr;
 	}
 }

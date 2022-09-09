@@ -3,7 +3,7 @@ using CSharp;
 
 Console.WriteLine("Codewars C#");
 
-Console.WriteLine($"'IX' is {RomanNumerals.FromRoman("IX")}");
+Console.WriteLine($"'XIV' is {RomanNumerals.FromRoman("XIV")}");
 Console.WriteLine($"1642 is {RomanNumerals.ToRoman(1642)}");
 
 Console.WriteLine($"Next bigger of 1234567890 is {NextBigger.NextBiggerNumber(1234567890)}");

@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/55983863da40caa2c900004e/typescript
+
 export class NextBigger
 {
 	public static nextBigger(n: number): number

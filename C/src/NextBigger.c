@@ -1,4 +1,7 @@
-// Created by Mathi on 2022-02-04.
+// https://www.codewars.com/kata/55983863da40caa2c900004e/c
+
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling"
 
 #include <string.h>
 #include <stdio.h>
@@ -7,7 +10,7 @@
 
 #include "NextBigger.h"
 
-void reverse(char* str, size_t len)
+void Reverse(char* str, size_t len)
 {
 	for (int i = 0; i < len / 2; i++)
 	{
@@ -17,10 +20,10 @@ void reverse(char* str, size_t len)
 	}
 }
 
-char* slice(const char* string, size_t start, size_t end)
+char* Slice(const char* string, size_t start, size_t end)
 {
 	size_t len = end - start;
-	char* substring = calloc(len, sizeof(int));
+	char* substring = calloc(len + 1, sizeof(char));
 	
 	for (size_t j = 0; j < len; j++)
 	{
@@ -30,7 +33,7 @@ char* slice(const char* string, size_t start, size_t end)
 	return substring;
 }
 
-long long string_to_number(char* string)
+long long StringToNumber(char* string)
 {
 	size_t len = strlen(string);
 	long long num = 0;
@@ -48,7 +51,7 @@ long long NextBigger_NextBiggerNumber(long long n)
 	char digits[38] = { 0 };
 	sprintf(digits, "%lld", n);
 	size_t len = strlen(digits);
-	reverse(digits, len);
+	Reverse(digits, len);
 	
 	for (size_t j = 0; j < len; j++)
 	{
@@ -59,19 +62,24 @@ long long NextBigger_NextBiggerNumber(long long n)
 			{
 				if (digits[i] < digits[j])
 				{
-					char* left = slice(digits, i + 1, len);
-					reverse(left, strlen(left));
+					char* left = Slice(digits, i + 1, len);
+					Reverse(left, strlen(left));
 					
-					char* result = calloc(len, sizeof(int));
+					printf("%s", left);
+					char* result = calloc(len + 1, sizeof(char));
 					sprintf(result, "%s%c", left, digits[j]);
+					printf("%s", result);
 					
 					digits[j] = digits[i];
 					
-					char* right = slice(digits, 0, i);
+					char* right = Slice(digits, 0, i);
+					printf("%s", right);
 					
 					sprintf(result, "%s%s", result, right);
 					
-					return string_to_number(result);
+					long long res = StringToNumber(result);
+					free(result);
+					return res;
 				}
 			}
 		}
@@ -79,3 +87,5 @@ long long NextBigger_NextBiggerNumber(long long n)
 	
 	return n;
 }
+
+#pragma clang diagnostic pop

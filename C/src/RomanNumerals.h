@@ -1,7 +1,6 @@
-// Created by Mathi on 2022-02-04.
+// https://www.codewars.com/kata/51b66044bce5799a7f000003/c
 
-#ifndef C_ROMANNUMERALS_H
-#define C_ROMANNUMERALS_H
+#pragma once
 
 struct RomanNumber
 {
@@ -9,8 +8,6 @@ struct RomanNumber
 	int Number;
 };
 
-int RomanNumerals__FromRoman(char* roman);
+int RomanNumerals_FromRoman(char* roman);
 
-void RomanNumerals__ToRoman(int number, char* destination);
-
-#endif // C_ROMANNUMERALS_H
+void RomanNumerals_ToRoman(int number, char* destination);

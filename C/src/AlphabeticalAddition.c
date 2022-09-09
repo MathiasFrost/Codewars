@@ -1,8 +1,8 @@
-// Created by Mathi on 2022-02-20.
+// https://www.codewars.com/kata/5d50e3914861a500121e1958/c
 
 #include "AlphabeticalAddition.h"
 
-unsigned char AlphabeticalAddition__AddLetters(size_t n, unsigned char* string)
+unsigned char AlphabeticalAddition_AddLetters(size_t n, unsigned char* string)
 {
 	string[n] = 0;
 	if (*string)

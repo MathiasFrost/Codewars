@@ -1,15 +1,16 @@
-// Created by Mathi on 2022-02-04.
+// https://www.codewars.com/kata/52a89c2ea8ddc5547a000863/c
 
-#ifndef C_GETLOOP_H
-#define C_GETLOOP_H
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
+#pragma once
 
-typedef struct Node SNode;
+typedef struct INode Node;
 
-struct Node
+struct INode
 {
-	SNode* next;
+	Node* next;
 };
 
-int GetLoop__LoopSize(SNode* node);
+int GetLoop_LoopSize(Node* node);
 
-#endif // C_GETLOOP_H
+#pragma clang diagnostic pop

@@ -1,21 +1,10 @@
 {
-    "name": "coffeescript",
-    "version": "1.0.0",
-    "main": "Build/CoffeeScript.js",
-    "type": "module",
-    "license": "MIT",
-    "scripts": {
-        "start": "node Build/CoffeeScript.js",
-        "build": "webpack build",
-        "test": "mocha --require coffeescript/register Test/**/*.coffee"
-    },
-    "devDependencies": {
-        "chai": "^4.3.6",
-        "coffeescript": "^2.6.1",
-        "coffeescript-loader": "^0.0.11",
-        "mocha": "^9.2.0",
-        "mocha-loader": "^5.1.5",
-        "webpack": "^5.68.0",
-        "webpack-cli": "^4.9.2"
-    }
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"start": "coffee main.coffee"
+	},
+	"devDependencies": {
+		"coffee-script": "^1.12.7"
+	}
 }
