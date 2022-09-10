@@ -1,3 +1,4 @@
+      * https://www.codewars.com/kata/55983863da40caa2c900004e/cobol
        identification division.
        program-id. next_bigger_number.
 
@@ -32,9 +33,8 @@
                           to result(39 - len:)
                        move el(j) to result(39 - i:1)
                        move el(i) to el(j)
-                       display 'digits is: ' digits
-                       display 'result is: ' result
                        move digits(1:i - 1) to result(40 - i:)
                  end-search
            end-search.
+
        end program next_bigger_number.

@@ -65,16 +65,12 @@ long long NextBigger_NextBiggerNumber(long long n)
 					char* left = Slice(digits, i + 1, len);
 					Reverse(left, strlen(left));
 					
-					printf("%s", left);
 					char* result = calloc(len + 1, sizeof(char));
 					sprintf(result, "%s%c", left, digits[j]);
-					printf("%s", result);
 					
 					digits[j] = digits[i];
 					
 					char* right = Slice(digits, 0, i);
-					printf("%s", right);
-					
 					sprintf(result, "%s%s", result, right);
 					
 					long long res = StringToNumber(result);
