@@ -3,6 +3,7 @@
 (provide hist)
 
 (define (hist s)
+    
   (string-join 
     (map (lambda (pair)
         (format "~c  ~a ~a" (car pair) (~a (cdr pair) #:min-width 5 #:align 'left) (make-string (cdr pair) #\*)))
