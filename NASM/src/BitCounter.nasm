@@ -4,7 +4,7 @@ section .text
 
 BitCounter:
 
-	mov rax, 0
+	mov rax, 0 ; return value will be stored and modified in primary accumulator (ax)
 	cmp rdi, 0 ; input is expected to be found in destination index (di)
 	je end     ; jump to end if 0
 
@@ -18,5 +18,5 @@ BitCounter:
 		cmp rdi, 0
 		jne while
 
-	end:
+end:
 	ret

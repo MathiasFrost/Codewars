@@ -1,6 +1,6 @@
-﻿Public Module NextBigger
+﻿Friend Module NextBigger
     Public Function NextBiggerNumber(n As Long) As Long
-        
+
         Dim digits As IList (Of Char) = n.ToString().ToCharArray()
         Dim index = digits.Count - 1
 
@@ -30,6 +30,6 @@
         right.Sort(function(a, b) a.CompareTo(b))
 
         Return Long.Parse(String.Join("", left.Concat(New Char() {mid}).Concat(right)))
-        
+
     End Function
 End Module

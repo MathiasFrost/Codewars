@@ -22,7 +22,7 @@ main:
     call BitCounter ; stores return in primary accumulator (ax)
     mov  rdi, bitmsg
     mov  rsi, rax
-    xor  rax, rax
+    mov  rax, 0     ; reset
     call printf
 
     mov rax, 60  ; sys call for exit
