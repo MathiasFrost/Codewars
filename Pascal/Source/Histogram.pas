@@ -11,10 +11,11 @@ unit Histogram;
 interface
 
 type
-  THistogram = class
-  public
-    class function Hist(strng: string): string; static;
-  end;
+	THistogram = class
+	public
+
+		class function Hist(strng: string): string; static;
+	end;
 
 implementation
 
@@ -23,32 +24,35 @@ uses sysutils;
 class function THistogram.Hist(strng: string): string;
 
 type
-  TCount = array[char] of Int16;
+	TCount = array[char] of Int16;
 
 var
-  count: TCount;
-  letter: Char;
-  i: Integer;
-  res: string;
-  value: Integer;
+	count: TCount;
+	letter: Char;
+	i: Integer;
+	res: string;
+	value: Integer;
 
 begin
-  for letter := 'a' to 'z' do
-    count[letter] := 0;
+	for letter := 'a' to 'z' do
 
-  for i := 1 to Length(strng) do
-    count[strng[i]] := count[strng[i]] + 1;
+		count[letter] := 0;
 
-  res := '';
-  for i := 1 to 4 do
-  begin
-    letter := 'uwxz'[i];
-    value := count[letter];
-    if value > 0 then
-      res := res + Format('%s  %-5d %*.*s\n', [letter, value, value, value, '*******************************************']);
-  end;
+	for i := 1 to Length(strng) do
+		
+		count[strng[i]] := count[strng[i]] + 1;
 
-  Result := Copy(res, 0, Length(res) - 2);
+	res := '';
+	for i := 1 to 4 do
+	begin
+		letter := 'uwxz'[i];
+		value := count[letter];
+		if value > 0 then
+
+			res := res + Format('%s  %-5d %*.*s\n', [letter, value, value, value, '*******************************************']);
+	end;
+
+	Result := Copy(res, 0, Length(res) - 2);
 end;
 
 end.

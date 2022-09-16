@@ -1,5 +1,4 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fsharp", "Fsharp\Fsharp.fsproj", "{7198DD78-BD4E-48C0-BEB9-16F1BC33C4D7}"
 EndProject
 Global

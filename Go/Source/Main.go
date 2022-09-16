@@ -1,6 +1,7 @@
 package main
 
-func main() {
+func main()
+{
 	println("Codewars Go")
-	println(Histogram{}.Hist("tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb"))
+	println(Histogram { }.Hist("tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb"))
 }

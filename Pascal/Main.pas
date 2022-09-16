@@ -6,10 +6,12 @@
 program Main;
 
 uses
-  Histogram;
+	Histogram;
 
 begin
-  WriteLn('Codewars Pascal');
 
-  WriteLn(THistogram.Hist('tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb'));
+	WriteLn('Codewars Pascal');
+
+	WriteLn(THistogram.Hist('tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb'));
+
 end.

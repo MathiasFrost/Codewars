@@ -3,8 +3,8 @@
 export class NextBigger
 
 	###
-	@param {number} n
-	@returns {number}
+		@param {number} n
+		@returns {number}
 	###
 	@nextBigger: (n) ->
 		digits = Array.from n.toString()

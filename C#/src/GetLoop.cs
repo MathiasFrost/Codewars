@@ -2,10 +2,8 @@
 
 namespace CSharp;
 
-// ReSharper disable once UnusedType.Global
 public static class GetLoop
 {
-	// ReSharper disable once UnusedMember.Global
 	public static int GetLoopSize(Node startNode)
 	{
 		var length = 1;
@@ -30,20 +28,15 @@ public static class GetLoop
 	}
 }
 
-public class Node
+public sealed class Node
 {
 	public Node(string name) => Name = name;
-
 	public Node? Next { get; set; }
-
-	// ReSharper disable once UnusedAutoPropertyAccessor.Local
 	private string Name { get; }
 }
 
-// ReSharper disable once UnusedType.Global
 public static class NodeCreator
 {
-	// ReSharper disable once UnusedMember.Global
 	public static Node CreateChain(int tail, int loop)
 	{
 		if (tail < 1 || loop < 1)

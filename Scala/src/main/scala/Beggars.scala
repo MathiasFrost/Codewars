@@ -13,8 +13,7 @@ object Beggars
 				res += values(j)
 			}
 			arr :+= res
-		}
-		
+		}	
 		arr
 	}
 }

@@ -13,9 +13,9 @@ public static class Histogram
 		}
 
 		IEnumerable<string> strings = from letter in "uwxz"
-				let num = count[letter]
+			let num = count[letter]
 				where num > 0
-				let str = $"{letter}  {num,-6}"
+			let str = $"{letter}  {num,-6}"
 				select str + new string('*', num);
 
 		return String.Join('\n', strings);

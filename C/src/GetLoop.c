@@ -2,9 +2,6 @@
 
 #include "GetLoop.h"
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
-
 int GetLoop_LoopSize(Node* node)
 {
 	int length = 1;
@@ -28,5 +25,3 @@ int GetLoop_LoopSize(Node* node)
 	
 	return length;
 }
-
-#pragma clang diagnostic pop

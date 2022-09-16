@@ -1,5 +1,5 @@
       ******************************************************************
-      * Author: Mathias L�ken
+      * Author: Mathias Løken
       * Date: 2020-09-10
       * Purpose: Codewars
       * Tectonics: cobc

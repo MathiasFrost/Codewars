@@ -7,24 +7,32 @@
 local Histogram = {}
 
 function Histogram.hist(s)
-    local count = {}
-    for i = 1, #s do
-        local letter = s:sub(i, i)
-        count[letter] = count[letter] and count[letter] + 1 or 1
-    end
+	
+	local count = {}
+	for i = 1, #s do
 
-    local res = {}
-    for i = 1, #"uwxz" do
-        local letter = ("uwxz"):sub(i, i)
-        local value = count[letter]
-        if value then
-            local num = string.format("%s  %-6d", letter, value)
-            local stars = ("*"):rep(value)
-            table.insert(res, num .. stars)
-        end
-    end
+		local letter = s:sub(i, i)
+		count[letter] = count[letter] and count[letter] + 1 or 1
 
-    return table.concat(res, "\n")
+	end
+
+	local res = {}
+	for i = 1, #"uwxz" do
+
+		local letter = ("uwxz"):sub(i, i)
+		local value = count[letter]
+		if value then
+
+			local num = string.format("%s  %-6d", letter, value)
+			local stars = ("*"):rep(value)
+			table.insert(res, num .. stars)
+
+		end
+
+	end
+
+	return table.concat(res, "\n")
+
 end
 
 return Histogram
