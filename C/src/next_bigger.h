@@ -2,4 +2,4 @@
 
 #pragma once
 
-long long NextBigger_NextBiggerNumber(long long n);
+long long next_bigger_next_bigger_number(long long n);

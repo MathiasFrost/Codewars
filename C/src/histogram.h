@@ -2,4 +2,4 @@
 
 #pragma once
 
-char* Histogram_Hist(const char* s);
+char* histogram_hist(const char* s);

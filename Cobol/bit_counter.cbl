@@ -1,26 +1,26 @@
       * https://www.codewars.com/kata/526571aae218b8ee490006f4/cobol
-       identification division.
-       program-id. bit_counter.
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. BIT_COUNTER.
 
-       data division.
-       working-storage section.
-       01  abin   pic 9(8) usage is binary.
-       01  bbin   pic 9(8) usage is binary.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 ABIN    PIC 9(8) USAGE IS BINARY.
+       01 BBIN    PIC 9(8) USAGE IS BINARY.
 
-       linkage section.
-       01 n       pic 9(8).
-       01 result  pic 9(20).
+       LINKAGE SECTION.
+       01 N       PIC 9(8).
+       01 RESULT  PIC 9(20).
 
-       procedure division using n result.
-           move 0 to result.
-           perform calc until n = 0.
-           goback.
+       PROCEDURE DIVISION USING N RESULT.
+           MOVE 0 TO RESULT.
+           PERFORM CALC UNTIL N = 0.
+           GOBACK.
 
-           calc.
-               move n to abin.
-               subtract 1 from n giving bbin.
-               call "CBL_AND" using abin bbin by value 8.
-               move bbin to n.
-               add 1 to result giving result.
+       CALC.
+           MOVE N TO ABIN.
+           SUBTRACT 1 FROM N GIVING BBIN.
+           CALL "CBL_AND" USING ABIN BBIN BY VALUE 8.
+           MOVE BBIN TO N.
+           ADD 1 TO RESULT GIVING RESULT.
 
-       end program bit_counter.
+       END PROGRAM BIT_COUNTER.

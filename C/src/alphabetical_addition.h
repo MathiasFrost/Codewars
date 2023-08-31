@@ -4,4 +4,4 @@
 
 #include <stddef.h>
 
-unsigned char AlphabeticalAddition_AddLetters(size_t n, unsigned char* string);
+unsigned char alphabetical_addition_add_letters(size_t n, unsigned char* string);

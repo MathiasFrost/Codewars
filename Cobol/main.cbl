@@ -4,31 +4,31 @@
       * Purpose: Codewars
       * Tectonics: cobc
       ******************************************************************
-       identification division.
-       program-id. COBOL.
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COBOL.
 
-       data division.
-       file section.
+       DATA DIVISION.
+       FILE SECTION.
 
-       working-storage section.
+       WORKING-STORAGE SECTION.
       * next_bigger_number
-       01  n                 pic 9(38) value 1234567890.
-       01  result            pic s9(38) sign leading.
+       01 N       PIC 9(38)  VALUE 1234567890.
+       01 RESULT  PIC S9(38) SIGN LEADING.
       * bit_counter
-       01  bits              pic 9(8) value 1234.
-       01  bitres            pic 9(20).
+       01 BITS    PIC 9(8)   VALUE 1234.
+       01 BITRES  PIC 9(20).
 
-       procedure division.
+       PROCEDURE DIVISION.
 
-           display "Codewars COBOL".
+           DISPLAY "Codewars COBOL".
 
-           call "next_bigger_number"
-              using by content n by reference result.
-           display "Next bigger of 1234567890 is " result.
+           CALL "next_bigger_number"
+              USING BY CONTENT N BY REFERENCE RESULT.
+           DISPLAY "Next bigger of 1234567890 is " RESULT.
 
-           call "bit_counter" using by content bits by reference bitres.
-           display "Number of bits in 1234 is " bitres.
+           CALL "bit_counter" USING BY CONTENT BITS BY REFERENCE BITRES.
+           DISPLAY "Number of bits in 1234 is " BITRES.
 
-           stop run.
+           STOP RUN.
 
-       end program COBOL.
+       END PROGRAM COBOL.

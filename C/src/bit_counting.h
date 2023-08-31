@@ -4,4 +4,4 @@
 
 #include <stddef.h>
 
-size_t BitCounting_CountBits(unsigned value);
+__attribute__((unused)) size_t bit_counting_count_bits(unsigned value);

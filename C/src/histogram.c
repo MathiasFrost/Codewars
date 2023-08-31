@@ -4,14 +4,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "Histogram.h"
+#include "histogram.h"
 
-enum
-{
-	OFFSET = 97
-};
+#define OFFSET 97
 
-char* Histogram_Hist(const char* s)
+char* histogram_hist(const char* s)
 {
 	unsigned short count[26] = { 0 };
 	for (size_t i = 0; i < strlen(s); i++)
@@ -19,7 +16,7 @@ char* Histogram_Hist(const char* s)
 		const char letter = s[i];
 		count[letter - OFFSET]++;
 	}
-	
+
 	char* res = calloc(400, sizeof(char));
 	for (unsigned char i = 0; i < 4; i++)
 	{
@@ -29,7 +26,7 @@ char* Histogram_Hist(const char* s)
 		{
 			char prefix[50];
 			sprintf(prefix, "%c  %-5d %*.*s\n", letter, num, num, num, "*******************************************");
-			strcat_s(res, 400, prefix);
+			strcat(res, prefix);
 		}
 	}
 	res[strlen(res) - 1] = '\0';
