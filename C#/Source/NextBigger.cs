@@ -10,16 +10,10 @@ public static class NextBigger
 		int index = digits.Count - 1;
 
 		// If a digit is greater than the previous, we can swap it
-		while (index > 0 && digits[index] <= digits[index - 1])
-		{
-			index--;
-		}
+		while (index > 0 && digits[index] <= digits[index - 1]) index--;
 
 		// If there was none, it is already arranged in the highest possible combination
-		if (index < 1)
-		{
-			return -1;
-		}
+		if (index < 1) return -1;
 
 		// Split the digits at the swappable number
 		IEnumerable<char> left = digits.Take(index - 1);

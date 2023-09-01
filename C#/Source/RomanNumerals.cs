@@ -7,19 +7,19 @@ public record struct RomanNumber(string Letter, int Number);
 public static class RomanNumerals
 {
 	private static readonly IList<RomanNumber> RomanNumbers = new List<RomanNumber> {
-			new("M" , 1000),
-			new("CM",  900),
-			new("D" ,  500),
-			new("CD",  400),
-			new("C" ,  100),
-			new("XC",   90),
-			new("L" ,   50),
-			new("XL",   40),
-			new("X" ,   10),
-			new("IX",    9),
-			new("V" ,    5),
-			new("IV",    4),
-			new("I" ,    1),
+		new("M", 1000),
+		new("CM", 900),
+		new("D", 500),
+		new("CD", 400),
+		new("C", 100),
+		new("XC", 90),
+		new("L", 50),
+		new("XL", 40),
+		new("X", 10),
+		new("IX", 9),
+		new("V", 5),
+		new("IV", 4),
+		new("I", 1)
 	};
 
 	public static string ToRoman(int n)
@@ -38,6 +38,7 @@ public static class RomanNumerals
 				i++;
 			}
 		}
+
 		return ret;
 	}
 
@@ -57,6 +58,7 @@ public static class RomanNumerals
 				i++;
 			}
 		}
+
 		return ret;
 	}
 }
