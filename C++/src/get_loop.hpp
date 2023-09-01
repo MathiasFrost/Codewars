@@ -5,7 +5,7 @@
 class Node
 {
 public:
-	Node* getNext()
+	Node* get_next()
 	{
 		return this->next;
 	}
@@ -17,5 +17,5 @@ private:
 class GetLoop
 {
 public:
-	int GetLoopSize(Node* startNode);
+	[[maybe_unused]] static int get_loop_size(Node* start_node);
 };

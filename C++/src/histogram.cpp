@@ -3,16 +3,16 @@
 #include <sstream>
 #include <map>
 
-#include "Histogram.hpp"
+#include "histogram.hpp"
 
-std::string Histogram::Hist(const std::string& s)
+std::string Histogram::hist(const std::string& s)
 {
 	std::map<char, unsigned short> count;
 	for (char letter : s)
 	{
 		count[letter]++;
 	}
-	
+
 	std::stringstream resStream;
 	for (auto letter : "uwxz")
 	{
@@ -23,7 +23,7 @@ std::string Histogram::Hist(const std::string& s)
 			resStream << letter << "  " << num << stars << '\n';
 		}
 	}
-	
+
 	std::string res = resStream.str();
 	return res.substr(0, res.length() - 2);
 }

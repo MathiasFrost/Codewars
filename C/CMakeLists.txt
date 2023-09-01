@@ -3,8 +3,7 @@ project(C C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(C
-        main.c
+add_executable(C main.c
         src/roman_numerals.c src/roman_numerals.h
         src/get_loop.c src/get_loop.h
         src/histogram.c src/histogram.h

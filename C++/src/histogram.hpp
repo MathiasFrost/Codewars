@@ -7,5 +7,5 @@
 class Histogram
 {
 public:
-	static std::string Hist(const std::string& s);
+	static std::string hist(const std::string& s);
 };

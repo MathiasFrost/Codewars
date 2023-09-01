@@ -7,5 +7,5 @@
 class Beggars
 {
 public:
-	static std::vector<int> Get(const std::vector<int>& values, unsigned int n);
+	static std::vector<int> get(const std::vector<int>& values, unsigned int n);
 };
